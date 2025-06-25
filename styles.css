@@ -5,16 +5,49 @@
   box-sizing: border-box;
 }
 
-/* Full-page setup */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: url('fireworks.gif') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh; /* Use min-height to let page grow */
+  color: white;
+  scroll-snap-type: y mandatory; /* Snap to sections */
+}
+
+.scroll-section {
+  scroll-snap-align: start;
+  height: 100vh; /* Full screen sections */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  font-size: 1.5rem;
+  z-index: 1000;
+}
+
+
+/* Full-page setup */
+/*body {
+  background: url('fireworks.gif') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
-  overflow: hidden;
   position: relative;
   color: white;
-}
+}*/
 
 /* Centered text container */
 .container {
