@@ -1,0 +1,55 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #001f3f;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: none;         /* ✅ No background */
+  text-shadow: 2px 2px 5px red, -2px -2px 5px blue;
+}
+
+
+/* 🎆 Fireworks at top */
+.fireworks {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 30%;
+  background: url('fireworks.gif') no-repeat center top;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* 🇺🇸 Flags at bottom */
+.flags {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background: url('flags.png') repeat-x bottom;
+  background-size: contain;
+  z-index: 1;
+}
