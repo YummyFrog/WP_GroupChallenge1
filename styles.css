@@ -53,3 +53,20 @@ body {
   background-size: contain;
   z-index: 1;
 }
+.play-button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  /* Make sure the button is visible */
+  position: relative;
+  z-index: 9999;
+
+  /* Optional: Center the button */
+  display: block;
+  margin: 20px auto;
+}
+
