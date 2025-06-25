@@ -28,6 +28,26 @@
   Play Music
 </button>
 
+<script>
+  document.addEventListener("click", function (e) {
+    const balloon = document.createElement("img");
+
+    const isGold = Math.random() < 0.1;
+    balloon.src = isGold ? "goldballoon.png" : "redballoon.png";
+    
+    balloon.className = "balloon";
+    balloon.style.left = `${e.clientX - 25}px`;
+    balloon.style.top = `${e.clientY - 50}px`;
+    document.body.appendChild(balloon);
+
+    setTimeout(() => {
+      balloon.remove();
+    }, 3000);
+  });
+</script>
+
+
+
 
 </body>
 
