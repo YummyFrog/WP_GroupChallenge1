@@ -68,7 +68,7 @@ body {
 }
 
 .balloon {
-  position: absolute;
+  position: fixed;
   width: 50px;
   height: auto;
   animation: floatUp 3s ease-out forwards;
